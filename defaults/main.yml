@@ -3,9 +3,11 @@ e2guardian_group: "{{ __e2guardian_group }}"
 e2guardian_service: e2guardian
 e2guardian_conf_dir: "{{ __e2guardian_conf_dir }}"
 e2guardian_conf_file: "{{ __e2guardian_conf_dir }}/e2guardian.conf"
+e2guardian_e2guardianf1_conf_file: "{{ __e2guardian_conf_dir }}/e2guardianf1.conf"
 e2guardian_flags: ""
 e2guardian_data_dir: "{{ __e2guardian_data_dir }}"
 e2guardian_log_dir: "{{ __e2guardian_log_dir }}"
+e2guardian_lists_dir: "{{ e2guardian_conf_dir }}/lists"
 
 e2guardian_config: {}
 e2guardian_config_default:
@@ -75,3 +77,58 @@ e2guardian_config_default:
   usecustombannedflash: "on"
   usecustombannedimage: "on"
   usexforwardedfor: "off"
+
+e2guardian_e2guardianf1_conf: {}
+e2guardian_e2guardianf1_conf_default:
+  addheaderregexplist: "{{ e2guardian_lists_dir }}/addheaderregexplist"
+  bannedextensionlist: "{{ e2guardian_lists_dir }}/bannedextensionlist"
+  bannedmimetypelist: "{{ e2guardian_lists_dir }}/bannedmimetypelist"
+  bannedphraselist: "{{ e2guardian_lists_dir }}/bannedphraselist"
+  bannedregexpheaderlist: "{{ e2guardian_lists_dir }}/bannedregexpheaderlist"
+  bannedregexpurllist: "{{ e2guardian_lists_dir }}/bannedregexpurllist"
+  bannedsitelist: "{{ e2guardian_lists_dir }}/bannedsitelist"
+  bannedsslsitelist: "{{ e2guardian_lists_dir }}/bannedsslsitelist"
+  bannedurllist: "{{ e2guardian_lists_dir }}/bannedurllist"
+  blockdownloads: "off"
+  bypass: 0
+  bypasskey: ""
+  categorydisplaythreshold: 0
+  contentregexplist: "{{ e2guardian_lists_dir }}/contentregexplist"
+  deepurlanalysis: "off"
+  disablecontentscan: "off"
+  embeddedurlweight: 0
+  embededreferersitelist: "{{ e2guardian_lists_dir }}/embededreferersitelist"
+  embededrefererurllist: "{{ e2guardian_lists_dir }}/embededrefererurllist"
+  enablepics: "off"
+  exceptionextensionlist: "{{ e2guardian_lists_dir }}/exceptionextensionlist"
+  exceptionfilesitelist: "{{ e2guardian_lists_dir }}/exceptionfilesitelist"
+  exceptionfileurllist: "{{ e2guardian_lists_dir }}/exceptionfileurllist"
+  exceptionmimetypelist: "{{ e2guardian_lists_dir }}/exceptionmimetypelist"
+  exceptionphraselist: "{{ e2guardian_lists_dir }}/exceptionphraselist"
+  exceptionregexpurllist: "{{ e2guardian_lists_dir }}/exceptionregexpurllist"
+  exceptionsitelist: "{{ e2guardian_lists_dir }}/exceptionsitelist"
+  exceptionurllist: "{{ e2guardian_lists_dir }}/exceptionurllist"
+  greysitelist: "{{ e2guardian_lists_dir }}/greysitelist"
+  greysslsitelist: "{{ e2guardian_lists_dir }}/greysslsitelist"
+  greyurllist: "{{ e2guardian_lists_dir }}/greyurllist"
+  groupmode: 1
+  groupname: ""
+  headerregexplist: "{{ e2guardian_lists_dir }}/headerregexplist"
+  infectionbypass: 0
+  infectionbypasserrorsonly: "on"
+  infectionbypasskey: ""
+  maxuploadsize: -1
+  mitmcheckcert: "on"
+  naughtynesslimit: 50
+  nocheckcertsitelist: "{{ e2guardian_lists_dir }}/nocheckcertsitelist"
+  onlymitmsslgrey: "off"
+  picsfile: "{{ e2guardian_lists_dir }}/pics"
+  refererexceptionsitelist: "{{ e2guardian_lists_dir }}/refererexceptionsitelist"
+  refererexceptionurllist: "{{ e2guardian_lists_dir }}/refererexceptionurllist"
+  reportinglevel: 3
+  sslcertcheck: "off"
+  sslmitm: "off"
+  sslsiteregexplist: "{{ e2guardian_lists_dir }}/sslsiteregexplist"
+  urlredirectregexplist: "{{ e2guardian_lists_dir }}/urlredirectregexplist"
+  urlregexplist: "{{ e2guardian_lists_dir }}/urlregexplist"
+  weightedphraselist: "{{ e2guardian_lists_dir }}/weightedphraselist"

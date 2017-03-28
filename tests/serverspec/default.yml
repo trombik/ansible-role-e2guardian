@@ -2,3 +2,5 @@
   roles:
     - ansible-role-e2guardian
   vars:
+    e2guardian_e2guardianf1_conf:
+      groupname: Default group

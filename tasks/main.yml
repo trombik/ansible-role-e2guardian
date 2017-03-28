@@ -6,6 +6,9 @@
 - set_fact:
     e2guardian_config_merged: "{{ e2guardian_config_default | combine(e2guardian_config) }}"
 
+- set_fact:
+    e2guardian_e2guardianf1_conf_merged: "{{ e2guardian_e2guardianf1_conf_default | combine(e2guardian_e2guardianf1_conf) }}"
+
 - include: "install-{{ ansible_os_family }}.yml"
 
 - include: "configure-{{ ansible_os_family }}.yml"
@@ -24,6 +27,12 @@
     src: e2guardian.conf.j2
     dest: "{{ e2guardian_conf_file }}"
     validate: echo %s
+  notify: Restart e2guardian
+
+- name: Create e2guardianf1.conf
+  template:
+    src: e2guardianf1.conf.j2
+    dest: "{{ e2guardian_e2guardianf1_conf_file }}"
   notify: Restart e2guardian
 
 - name: Start e2guardian

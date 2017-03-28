@@ -1,0 +1,8 @@
+# Managed by ansible
+{% for k, v in e2guardian_e2guardianf1_conf_merged | dictsort %}
+{% if v | string | match("\\d+$") %}
+{{ k }} = {{ v }}
+{% else %}
+{{ k }} = '{{ v }}'
+{% endif %}
+{% endfor %}
