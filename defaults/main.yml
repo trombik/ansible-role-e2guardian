@@ -1,8 +1,77 @@
-e2guardian_user: e2guardian
-e2guardian_group: e2guardian
-e2guardian_log_dir: /var/log/e2guardian
-e2guardian_db_dir: "{{ __e2guardian_db_dir }}"
+e2guardian_user: "{{ __e2guardian_user }}"
+e2guardian_group: "{{ __e2guardian_group }}"
 e2guardian_service: e2guardian
 e2guardian_conf_dir: "{{ __e2guardian_conf_dir }}"
 e2guardian_conf_file: "{{ __e2guardian_conf_dir }}/e2guardian.conf"
 e2guardian_flags: ""
+e2guardian_data_dir: "{{ __e2guardian_data_dir }}"
+e2guardian_log_dir: "{{ __e2guardian_log_dir }}"
+
+e2guardian_config: {}
+e2guardian_config_default:
+  bannediplist: "{{ e2guardian_conf_dir }}/lists/bannediplist"
+  contentscanexceptions: "off"
+  contentscannertimeout: 60
+  custombannedflashfile: "{{ e2guardian_data_dir }}/blockedflash.swf"
+  custombannedimagefile: "{{ e2guardian_data_dir }}/transparent1x1.gif"
+  deletedownloadedtempfiles: "on"
+  downloadmanager: "{{ e2guardian_conf_dir }}/downloadmanagers/default.conf"
+  downloadmanager: "{{ e2guardian_conf_dir }}/downloadmanagers/fancy.conf"
+  dstatlocation: "{{ e2guardian_log_dir }}/dstats.log"
+  exceptioniplist: "{{ e2guardian_conf_dir }}/lists/exceptioniplist"
+  filecachedir: "/tmp"
+  filtergroups: 1
+  filtergroupslist: "{{ e2guardian_conf_dir }}/lists/filtergroupslist"
+  filterip: ""
+  filterports: 8080
+  forcequicksearch: "off"
+  forwardedfor: "off"
+  hexdecodecontent: "off"
+  initialtrickledelay: 20
+  ipcfilename: "/tmp/.e2guardianipc"
+  ipipcfilename: "/tmp/.e2guardianipipc"
+  languagedir: "{{ e2guardian_data_dir }}/languages"
+  language: "ukenglish"
+  logadblocks: "off"
+  logchildprocesshandling: "off"
+  logclienthostnames: "off"
+  logconnectionhandlingerrors: "on"
+  logexceptionhits: 2
+  logfileformat: 1
+  loglevel: 2
+  loglocation: "{{ e2guardian_log_dir }}/access.log"
+  logsslerrors: "off"
+  loguseragent: "off"
+  maxagechildren: 500
+  maxchildren: 180
+  maxcontentfilecachescansize: 20000
+  maxcontentfiltersize: 256
+  maxcontentramcachescansize: 2000
+  maxips: 0
+  maxsparechildren: 32
+  minchildren: 20
+  minsparechildren: 16
+  nodaemon: "off"
+  nologger: "off"
+  pcontimeout: 55
+  phrasefiltermode: 2
+  prefercachedlists: "off"
+  preforkchildren: 10
+  preservecase: 0
+  proxyexchange: 20
+  proxyip: 127.0.0.1
+  proxyport: 3128
+  proxytimeout: 20
+  recheckreplacedurls: "off"
+  reverseaddresslookups: "off"
+  reverseclientiplookups: "off"
+  scancleancache: "on"
+  showweightedfound: "on"
+  softrestart: "off"
+  trickledelay: 10
+  urlcacheage: 900
+  urlcachenumber: 1000
+  urlipcfilename: "/tmp/.e2guardianurlipc"
+  usecustombannedflash: "on"
+  usecustombannedimage: "on"
+  usexforwardedfor: "off"

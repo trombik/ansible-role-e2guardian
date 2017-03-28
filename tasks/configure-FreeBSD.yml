@@ -1,0 +1,7 @@
+---
+
+- name: Create rc.d config
+  template:
+    src: FreeBSD.rc.d.j2
+    dest: /etc/rc.conf.d/e2guardian
+    mode: 0644

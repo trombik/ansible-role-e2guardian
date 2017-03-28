@@ -2,4 +2,3 @@
   roles:
     - ansible-role-e2guardian
   vars:
-    e2guardian_config: ""
