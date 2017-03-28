@@ -1,0 +1,37 @@
+---
+# tasks file for ansible-role-e2guardian
+
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- include: "install-{{ ansible_os_family }}.yml"
+
+- name: Create log directory
+  file:
+    path: "{{ e2guardian_log_dir }}"
+    mode: 0755
+    owner: "{{ e2guardian_user }}"
+    group: "{{ e2guardian_group }}"
+    state: directory
+  notify: Restart e2guardian
+
+- name: Create db directory
+  file:
+    path: "{{ e2guardian_db_dir }}"
+    mode: 0755
+    owner: "{{ e2guardian_user }}"
+    group: "{{ e2guardian_group }}"
+    state: directory
+  notify: Restart e2guardian
+
+- name: Create e2guardian.conf
+  template:
+    src: e2guardian.conf.j2
+    dest: "{{ e2guardian_conf_file }}"
+    validate: echo %s
+  notify: Restart e2guardian
+
+- name: Start e2guardian
+  service:
+    name: "{{ e2guardian_service }}"
+    enabled: true
+    state: started

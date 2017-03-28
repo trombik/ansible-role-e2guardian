@@ -1,0 +1,8 @@
+e2guardian_user: e2guardian
+e2guardian_group: e2guardian
+e2guardian_log_dir: /var/log/e2guardian
+e2guardian_db_dir: "{{ __e2guardian_db_dir }}"
+e2guardian_service: e2guardian
+e2guardian_conf_dir: "{{ __e2guardian_conf_dir }}"
+e2guardian_conf_file: "{{ __e2guardian_conf_dir }}/e2guardian.conf"
+e2guardian_flags: ""

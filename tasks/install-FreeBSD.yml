@@ -1,0 +1,6 @@
+---
+
+- name: Install e2guardian
+  pkgng:
+    name: e2guardian
+    state: present
