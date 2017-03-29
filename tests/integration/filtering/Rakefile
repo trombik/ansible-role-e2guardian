@@ -51,17 +51,7 @@ end
 
 desc "import required roles"
 task :prepare_roles do
-  required_roles.each do |r|
-    Dir.chdir("roles") do
-      res =  fetch "https://github.com/reallyenglish/#{r}/archive/master.tar.gz"
-      file = Tempfile.new("tar")
-      file.write(res.body)
-      file.close
-      sh "tar xf #{file.path}"
-      file.unlink
-      sh "mv #{r}-master #{r}"
-    end
-  end
+  sh "ansible-galaxy install -r requirements.yml"
 end
 
 desc "clean up required roles"
