@@ -20,6 +20,7 @@ when "freebsd"
 end
 config = "#{ config_dir }/e2guardian.conf"
 e2guardianf1_conf = "#{ config_dir }/e2guardianf1.conf"
+lists_dir = "#{ config_dir }/lists"
 
 describe package(package) do
   it { should be_installed }
@@ -36,6 +37,14 @@ describe file(e2guardianf1_conf) do
   it { should be_owned_by default_user }
   it { should be_grouped_into default_group }
   its(:content) { should match(/^groupname = 'Default group'$/) }
+end
+
+describe file("#{ lists_dir }/bannedsitelist") do
+  it { should be_file }
+  it { should be_mode 644 }
+  it { should be_owned_by default_user }
+  it { should be_grouped_into default_group }
+  its(:content) { should match(/^2ch\.net$/) }
 end
 
 describe file(log_dir) do

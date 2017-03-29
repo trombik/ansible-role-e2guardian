@@ -35,6 +35,13 @@
     dest: "{{ e2guardian_e2guardianf1_conf_file }}"
   notify: Restart e2guardian
 
+- name: Create lists
+  template:
+    src: list.j2
+    dest: "{{ e2guardian_e2guardianf1_conf_merged[item.key] }}"
+  notify: Restart e2guardian
+  with_dict: "{{ e2guardian_list }}"
+
 - name: Start e2guardian
   service:
     name: "{{ e2guardian_service }}"
