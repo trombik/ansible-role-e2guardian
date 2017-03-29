@@ -18,7 +18,6 @@ e2guardian_config_default:
   custombannedimagefile: "{{ e2guardian_data_dir }}/transparent1x1.gif"
   deletedownloadedtempfiles: "on"
   downloadmanager: "{{ e2guardian_conf_dir }}/downloadmanagers/default.conf"
-  downloadmanager: "{{ e2guardian_conf_dir }}/downloadmanagers/fancy.conf"
   dstatlocation: "{{ e2guardian_log_dir }}/dstats.log"
   exceptioniplist: "{{ e2guardian_conf_dir }}/lists/exceptioniplist"
   filecachedir: "/tmp"
