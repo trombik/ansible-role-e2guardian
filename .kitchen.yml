@@ -33,6 +33,19 @@ platforms:
       extra_vars:
         ansible_python_interpreter: '/usr/local/bin/python'
 
+# XXX a package has been added to the official repository but Zesty only.
+# https://launchpad.net/ubuntu/+source/e2guardian
+#
+# available options:
+#
+# * wait for the project to backport it to other releases
+# * build deb packages and include them in the role
+#
+#  - name: ubuntu-16.04-amd64
+#    driver:
+#      box: trombik/ansible-ubuntu-16.04-amd64
+#      box_check_update: false
+
 suites:
   - name: default
     provisioner:
