@@ -48,7 +48,7 @@ platforms:
 
   - name: debian-8.7-adm64
     driver:
-      box: trombik/test-debian-8.7-amd64
+      box: trombik/ansible-debian-8.7-amd64
       box_check_update: false
 
 suites:
