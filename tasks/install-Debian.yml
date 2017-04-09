@@ -2,5 +2,6 @@
 
 - name: Install e2guardian
   apt:
-    name: e2guardian
+    # use `deb` here until the deb goes into the official tree
+    deb: https://github.com/e2guardian/e2guardian/releases/download/v4.0beta2/e2guardian_4.0.2_jessie_ubuntu16.04_amd64.deb
     state: present
