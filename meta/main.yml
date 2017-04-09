@@ -1,14 +1,16 @@
 ---
 galaxy_info:
   author: Tomoyuki Sakurai
-  description: Configures something
-  company: Reallyenglish
+  description: Configures e2guardian
   license: BSD
   min_ansible_version: 2.0
   platforms:
   - name: FreeBSD
     versions:
     - 10.3
+  - name: Debian
+    versions:
+    - jessie
 #  - name: OpenBSD
 #    versions:
 #    - 6.0
@@ -20,6 +22,6 @@ galaxy_info:
 #    - 7
 
   galaxy_tags:
-    - system
+    - proxy
 #dependencies:
 #  - { role: username.common, some_parameter: 3 }
