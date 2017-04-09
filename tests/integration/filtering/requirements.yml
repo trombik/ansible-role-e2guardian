@@ -1,3 +1,1 @@
 - name: trombik.squid
-  src: git@github.com:trombik/ansible-role-squid.git
-  scm: git
