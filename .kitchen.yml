@@ -46,7 +46,7 @@ platforms:
 #      box: trombik/ansible-ubuntu-16.04-amd64
 #      box_check_update: false
 
-  - name: debian-8.7-adm64
+  - name: debian-8.7-amd64
     driver:
       box: trombik/ansible-debian-8.7-amd64
       box_check_update: false
