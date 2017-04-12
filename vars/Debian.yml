@@ -3,3 +3,4 @@ __e2guardian_group: e2guardian
 __e2guardian_conf_dir: /etc/e2guardian
 __e2guardian_data_dir: /usr/share/e2guardian
 __e2guardian_log_dir: /var/log/e2guardian
+__e2guardian_debian_src: https://github.com/e2guardian/e2guardian/releases/download/v4.0beta2/e2guardian_4.0.2_jessie_ubuntu16.04_amd64.deb

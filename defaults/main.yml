@@ -8,6 +8,7 @@ e2guardian_flags: ""
 e2guardian_data_dir: "{{ __e2guardian_data_dir }}"
 e2guardian_log_dir: "{{ __e2guardian_log_dir }}"
 e2guardian_lists_dir: "{{ e2guardian_conf_dir }}/lists"
+e2guardian_debian_src: "{{ __e2guardian_debian_src }}"
 
 e2guardian_config: {}
 e2guardian_config_default:
