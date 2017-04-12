@@ -20,6 +20,7 @@ None
 | `e2guardian_data_dir` | path to directory where helper scripts and languages files reside | `{{ __e2guardian_data_dir }}` |
 | `e2guardian_log_dir` | path to log directory | `{{ __e2guardian_log_dir }}` |
 | `e2guardian_lists_dir` | path to directory where ACL files reside | `{{ e2guardian_conf_dir }}/lists` |
+| `e2guardian_debian_src` | `.deb` source path or URL (Debian only) | `{{ __e2guardian_debian_src }}` |
 | `e2guardian_config` | dict to override `e2guardian_config_default` | `{}` |
 | `e2guardian_config_default` | dict of `e2guardian.conf` | see below |
 | `e2guardian_e2guardianf1_conf` | dict to override `e2guardian_e2guardianf1_conf_default` | `{}` |
@@ -202,6 +203,7 @@ e2guardian_list:
 | `__e2guardian_conf_dir` | `/etc/e2guardian` |
 | `__e2guardian_data_dir` | `/usr/share/e2guardian` |
 | `__e2guardian_log_dir` | `/var/log/e2guardian` |
+| `__e2guardian_debian_src` | `https://github.com/e2guardian/e2guardian/releases/download/v4.0beta2/e2guardian_4.0.2_jessie_ubuntu16.04_amd64.deb` |
 
 ## FreeBSD
 
